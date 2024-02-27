@@ -11,6 +11,7 @@ const MODEL_NAME = "gemini-1.0-pro";
 const API_KEY = process.env.NEXT_PUBLIC_API as string;
 
 export default function Home() {
+
   const [input, setInput] = useState("");
   const [responseData, setResponseData] = useState("");
 
@@ -58,10 +59,10 @@ export default function Home() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between ">
-      <div className="z-10 max-w-5xl w-full items-center justify-center h-screen bg-red-500 font-mono text-sm lg:flex">
+    <main className="flex min-h-screen flex-col items-center justify-between bg-black ">
+      <div className="z-10 max-w-5xl w-full items-center bg-slate-400 justify-center h-screen font-mono text-sm lg:flex">
         <div>
-          <div className="bg-blue-400 rounded-xl my-6">
+          <div className="bg-blue-600 rounded-xl my-6">
             <h1 className="text-2xl p-4">
               Setting Up Google Gemini in Next.js
             </h1>
