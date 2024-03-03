@@ -7,8 +7,9 @@ import {
   HarmBlockThreshold,
 } from "@google/generative-ai";
 
-const MODEL_NAME = "gemini-1.0-pro";
+const MODEL_NAME = "gemini-pro";
 const API_KEY = process.env.NEXT_PUBLIC_API as string;
+const instructions = ''
 
 export default function Home() {
 
@@ -51,12 +52,14 @@ export default function Home() {
       history: [],
     });
 
-    const result = await chat.sendMessage(input);
+    const result = await chat.sendMessage(input + instructions);
     const response = result.response;
     console.log(response.text());
     setResponseData(response.text());
     setInput("");
   }
+
+  
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between bg-black ">
